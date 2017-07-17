@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Scrolled To Animation</title>
+	<link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="scroll_to_animation_styles.css">
+</head>
+<body onscroll="scrollListener()">
+<div id="controls">
+	<p id="display"></p>
+	<div id="buttons">
+		<input type="button" name="instant" value="Instant" onclick="setMulti(1)">
+		<input type="button" name="half" value="Half" onclick="setMulti(2)">
+		<input type="button" name="third" value="Third" onclick="setMulti(3)">
+	</div>
+	<div id="rangeContainer">
+		<p>Animation<br>Duration:</p>
+		<input type="range" id="animDuration" value="150" min="150" max="1500" step="50" oninput="handleAnimDurationSlider()">
+		<p id="rangeDisplay"></p>
+	</div>
+	<br><br>
+	<a href="index.html">Return home</a>
+</div>
+<h1>Manipulation when scrolling to parts of a page</h1>
+<p>The screen will inverse colors when scrolling to the text that says darkness<br>Alter the changing point with the buttons on the left</p>
+<h1>Lorem Ipsum</h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+<h1>Lorem Ipsum</h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+<h1>Lorem Ipsum</h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+<h1>Lorem Ipsum</h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+<h1>Lorem Ipsum</h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+<br>
+<hr>
+<h1 id="darkness">~~~~~~~~~~ DARKNESS ~~~~~~~~~~</h1>
+<hr>
+<br>
+
+<h1>Lorem Ipsum</h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+<h1>Lorem Ipsum</h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+<h1>Lorem Ipsum</h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+<h1>Lorem Ipsum</h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+<script type="text/javascript" src="scroll_to_animation_script.js"></script>
+</body>
+</html>
