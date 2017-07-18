@@ -7,7 +7,6 @@ const paragraphs = navbar.querySelectorAll("p");
 // Constants
 const body = document.body;
 const multiOptions = [1, 2, 3];
-const smallMedia = window.matchMedia("(max-width: 767px)");
 
 // Variables
 let multi = 2;
