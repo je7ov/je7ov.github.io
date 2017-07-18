@@ -97,3 +97,23 @@ h1 {
     flex-direction: column;
     justify-content: center;
 }
+
+#welcome-title {
+	min-width: 475;
+}
+
+@media (max-width: 768px) {
+	#header h1 {
+		font-size: 2.5rem;
+	}
+
+	#header h1:nth-of-type(2) {
+		letter-spacing: 13.8px;
+		margin-left: 24px;
+	}
+
+	#header h1:nth-of-type(3) {
+		letter-spacing: 3.6px;
+		margin-left: 8px;
+	}
+}
