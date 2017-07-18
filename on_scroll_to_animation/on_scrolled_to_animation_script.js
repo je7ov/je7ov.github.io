@@ -136,7 +136,7 @@ function fade(element, property, start, end, duration, interval) {
 // Set button classes to active or not
 function setButtonClasses() {
 	for (const [index, btn] of buttons.entries()) {
-		if (multi-1 === index || btn.classList.contains("active")) {
+		if (multi-1 === index%3 || btn.classList.contains("active")) {
 			btn.classList.toggle("active");
 		}
 	}
