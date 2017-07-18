@@ -10,7 +10,7 @@ const multiOptions = [1, 2, 3];
 
 // Variables
 let multi = 2;
-let animDuration = 150;
+let animDuration = 500;
 let black = false;
 let textInterval = null;
 let backgroundInterval = null;
@@ -137,9 +137,6 @@ function fade(element, property, start, end, duration) {
 			let g = Math.round(lerp(start.g, end.g, progress));
 			let b = Math.round(lerp(start.b, end.b, progress));
 			let colorname = `rgb(${r}, ${g}, ${b})`;
-			if (property === "background-color") {
-				console.log(colorname);
-			}
 
 			element.style.setProperty(property, colorname);
 		}
