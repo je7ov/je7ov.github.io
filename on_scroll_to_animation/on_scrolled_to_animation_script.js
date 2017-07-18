@@ -56,9 +56,12 @@ function scrollListener() {
 	checkDarkness();
 }
 
+window.addEventListener("scroll", () => { scrollListener() });
+
 //Check if "darkness" is past activation point and set animation if needed
 function checkDarkness() {
-	const change = body.scrollTop > darkness.offsetTop - window.innerHeight * (1 / multiOptions[multi-1]);
+	const topPixels = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+	const change = topPixels > darkness.offsetTop - window.innerHeight * (1 / multiOptions[multi-1]);
 
 	if (change === black) {
 		return;
@@ -148,3 +151,6 @@ function activationPointBtnClick(num) {
 	setButtonClasses();
 	checkDarkness();
 }
+
+window.onresize = checkDarkness;
+checkDarkness();
