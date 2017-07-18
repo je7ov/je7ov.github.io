@@ -62,7 +62,8 @@ h1 {
 @media (max-width: 767px) {
 	.content {
 		padding-top: 32px;
-		margin-left: 10%;
+		width: 95%;
+		padding-left: 2.5%;
 	}
 
 	.controls {
