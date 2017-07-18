@@ -21,17 +21,18 @@ h1 {
 	z-index: -10;
 }
 
-.content h1:first-of-type {
+.title {
 	font-size: 3.8em;
 	margin-bottom: 24px;
 }
 
-.content h4:first-of-type {
+.subtitle {
 	margin-bottom: 6%;
 	margin-left: 15%;
 	width: 70%;
 }
-.content h4:first-of-type, body h1:first-of-type {
+
+.title, .subtitle {
 	text-align: center;
 	font-weight: 700;
 }
