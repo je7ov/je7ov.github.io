@@ -19,7 +19,7 @@ let backgroundInterval = null;
 // Initialize button classes
 setButtonClasses();
 
-// Initialize slider
+// Initialize sliders
 const slider1 = new Slider('#slider1', {
 	formatter: (value) => {
 		return value;
@@ -40,7 +40,7 @@ const slider2 = new Slider('#slider2', {
 	value: animDuration
 });
 
-// On slide listener
+// On slide listeners
 slider1.on("slideStop", (value) => {
 	animDuration = value;
 	slider2.setValue(value);
@@ -55,7 +55,6 @@ slider2.on("slideStop", (value) => {
 function scrollListener() {
 	checkDarkness();
 }
-
 window.addEventListener("scroll", () => { scrollListener() });
 
 //Check if "darkness" is past activation point and set animation if needed
@@ -100,11 +99,12 @@ function checkDarkness() {
 
 	// Animate background color change
 	window.cancelAnimationFrame(backgroundInterval);
-	fade(body, "background-color", currentColor, newColor, animDuration, backgroundInterval);
+	// fade(body, "background-color", currentColor, newColor, animDuration, backgroundInterval);
+	backgroundInterval = fade(body, "background-color", currentColor, newColor, animDuration);
 
 	// Animate text color change
 	window.cancelAnimationFrame(textInterval);
-	fade(body, "color", currenteTextColor, newTextColor, animDuration, textInterval);
+	textInterval = fade(body, "color", currenteTextColor, newTextColor, animDuration);
 }
 
 // Linear interpolator
@@ -112,28 +112,38 @@ function lerp(color1, color2, ratio) {
 	return (1 - ratio) * color1 + ratio * color2;
 }
 
-// Fade animation
-function fade(element, property, start, end, duration, interval) {
-	const smoothing = 10;
-	const steps = duration / smoothing;
-	const stepsRatio = 1.0 / steps;
-	let ratio = 0.0;
+// Color fade function
+function fade(element, property, start, end, duration) {
+	return animate({
+		duration: animDuration,
+		timing: (timeFraction) => { return timeFraction; },
+		draw: (progress) => {
+			let r = Math.round(lerp(start.r, end.r, progress));
+			let g = Math.round(lerp(start.g, end.g, progress));
+			let b = Math.round(lerp(start.b, end.b, progress));
+			let colorname = `rgb(${r}, ${g}, ${b})`;
 
-	function fading() {
-		let r = Math.round(lerp(start.r, end.r, ratio));
-		let g = Math.round(lerp(start.g, end.g, ratio));
-		let b = Math.round(lerp(start.b, end.b, ratio));
-		let colorname = `rgb(${r}, ${g}, ${b})`;
-
-		element.style.setProperty(property, colorname);
-		ratio += stepsRatio;
-
-		if (ratio < 1.0) {
-			myInterval = window.requestAnimationFrame(fading);
+			element.style.setProperty(property, colorname);
 		}
-	}
+	})
+}
 
-	window.requestAnimationFrame(fading);
+// General animate function with animation frame requests
+function animate({duration, draw, timing}) {
+	let start = performance.now();
+
+	return requestAnimationFrame(function animate(time) {
+		let timeFraction = (time - start) / duration;
+		if (timeFraction > 1) timeFraction = 1;
+
+		let progress = timing(timeFraction);
+		
+		draw(progress);
+
+		if (timeFraction < 1) {
+			requestAnimationFrame(animate);
+		}
+	});
 }
 
 // Set button classes to active or not
