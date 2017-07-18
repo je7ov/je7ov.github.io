@@ -107,20 +107,39 @@ function checkDarkness() {
 }
 
 // Linear interpolator
-function lerp(color1, color2, ratio) {
-	return (1 - ratio) * color1 + ratio * color2;
+function lerp(a, b, ratio) {
+	return (1 - ratio) * a + ratio * b;
+}
+
+// Turn timing function into ease in and out
+function makeEaseInOut(timing, timeFraction) {
+	return function(timeFraction) {
+		if (timeFraction < .5) {
+			return timing(2 * timeFraction) / 2;
+		} else {
+			return (2 - timing(2 * (1 - timeFraction))) / 2;
+		}
+	}
+}
+
+// Quadratic timing function
+function quad(progress) {
+	return Math.pow(progress, 2);
 }
 
 // Color fade function
 function fade(element, property, start, end, duration) {
 	return animate({
 		duration: animDuration,
-		timing: (timeFraction) => { return timeFraction; },
+		timing: makeEaseInOut(quad),
 		draw: (progress) => {
 			let r = Math.round(lerp(start.r, end.r, progress));
 			let g = Math.round(lerp(start.g, end.g, progress));
 			let b = Math.round(lerp(start.b, end.b, progress));
 			let colorname = `rgb(${r}, ${g}, ${b})`;
+			if (property === "background-color") {
+				console.log(colorname);
+			}
 
 			element.style.setProperty(property, colorname);
 		}
