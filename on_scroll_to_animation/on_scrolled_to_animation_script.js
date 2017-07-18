@@ -46,7 +46,7 @@ slider1.on("slideStop", (value) => {
 	slider2.setValue(value);
 });
 
-slider2.on("slide", (value) => {
+slider2.on("slideStop", (value) => {
 	animDuration = value;
 	slider1.setValue(value);
 });
