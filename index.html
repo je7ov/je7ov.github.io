@@ -3,38 +3,272 @@
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Jeffrey Ovalles Portfolio</title>
-	<link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="stylesheet.css">
 </head>
 <body>
-<div class="container">
-	<h1 id="title">Welcome to my temporary portfolio!</h1>
-	<h3 id="subtitle">-Jeffrey Ovalles</h3>
-	<div class="jumbotron">
-		<h1 class="danger-sign">
-			<i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
-			Work in progress
-			<i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
-		</h1>
 
-		<div id="list" class="row">
-			<div class="col-sm-8">
-				
-			</div>
-			<h2>Check out some random things I've been doing in the meantime:</h2>
-			<ul>
-				<li><a href="landing_page/index.html">Work in progress landing page</a></li>
-				<li><a href="on_scroll_to_animation/on_scrolled_to_animation.html">Animating once scrolled to a specified element</a></li>
-			</ul>
-			<br>
-			<br>
-			<p>More coming soon</p>
-		</div>
+<div id="header">
+	<div class="container text-center" id="welcome-title">
+		<h1>WELCOME TO THE</h1>
+		<h1>PORTFOLIO</h1>
+		<h1>OF JEFFREY OVALLES</h1>
 	</div>
 </div>
 
+<div id="content">
+	<div class="container">
+		<div class="top-nav">
+			<button class="btn btn-info" onclick="scrollToID('projects-anchor')">WORKS</button>
+			<button class="btn btn-info" onclick="scrollToID('about-me-anchor')">ABOUT ME</button>
+			<button class="btn btn-info" onclick="scrollToID('contacts-anchor')">CONTACTS</button>
+		</div>
+
+		<div class="hidden" id="top-nav-padding"></div>
+
+		<div id="projects" class="section">
+
+			<h1 id="projects-anchor">Works</h1>
+
+			<a href="on_scrolled_to_animation/on_scrolled_to_animation.html">
+				<div class="row project-item">
+					<div class="col-md-7 project-text">
+						<h3>DOM Manipulation When Scrolled To Certain Elements</h3>
+						<p>Small example page of running an animation, or effectively anything you would like to do,
+						once the user has scrolled to a certain element on the page. Works completely dynamically, 
+						letting it work on any screen size, from desktop to mobile</p>
+					</div>
+					<div class="col-md-5">
+						<div class="thumbnail">
+							<img src="images/darkness_screenshot.png">
+						</div>
+					</div>
+				</div>
+			</a>
+			
+			<hr>
+
+			<a href="">
+				<div class="row project-item">
+					<div class="col-md-7 project-text">
+						<h3>Under Construction!</h3>
+						<p>This portfolio is still very new and is being updated frequently with new content.
+						Please excuse all of the filler text and content. So much Lorem Ipsum everywhere.
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat.</p>
+					</div>
+					<div class="col-md-5">
+						<div class="thumbnail-wrapper">
+							<div class="thumbnail">
+								<img src="images/work-in-progress.jpg">
+							</div>
+						</div>
+					</div>
+				</div>
+			</a>
+			
+			<hr>
+
+			<a href="">
+				<div class="row project-item">
+					<div class="col-md-7 project-text">
+						<h3>React.JS & React Native</h3>
+						<p>Using the power of Facebook's React, you can make fast, responsive webpages and phone applications. Here are some of my bits and pieces tinkering with React. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					</div>
+					<div class="col-md-5">
+						<div class="thumbnail-wrapper">
+							<div class="thumbnail">
+								<img src="http://codecondo.com/wp-content/uploads/2015/05/Resources-to-Get-You-Started-with-ReactJS.jpg?x94435">
+							</div>
+						</div>
+					</div>
+				</div>
+			</a>
+			
+			<hr>
+
+			<a href="">
+				<div class="row project-item">
+					<div class="col-md-7 project-text">
+						<h3>GameMaker Engine</h3>
+						<p>Yoyo Games' game engine is great for beginners and experienced and seasoned developers alike. Have a look at some of the games I've put together on my own, as well as some still in progress. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					</div>
+					<div class="col-md-5">
+						<div class="thumbnail">
+							<img src="https://www.yoyogames.com/system/blogs/featured_images/000/000/401/original/Newspost_1x.png?1480418002">
+						</div>
+					</div>
+				</div>
+			</a>
+			
+			<hr>
+
+			<a href="">
+				<div class="row project-item">
+					<div class="col-md-7 project-text">
+						<h3>Android</h3>
+						<p>Google's mobile platform Android hit an 88% market share of all smartphones, making it a great way to easily reach a large population with your apps. Check out some of the small apps I've made here. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					</div>
+					<div class="col-md-5">
+						<div class="thumbnail">
+							<img src="https://1yjmqg26uh9k15zq0o1pderc-wpengine.netdna-ssl.com/wp-content/uploads/2017/01/android-image.png">
+						</div>
+					</div>
+				</div>
+			</a>
+			
+			<hr>
+
+			<a href="">
+				<div class="row project-item">
+					<div class="col-md-7 project-text">
+						<h3>React.JS & React Native</h3>
+						<p>Using the power of Facebook's React, you can make fast, responsive webpages and phone applications. Here are some of my bits and pieces tinkering with React. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					</div>
+					<div class="col-md-5">
+						<div class="thumbnail">
+							<img src="http://codecondo.com/wp-content/uploads/2015/05/Resources-to-Get-You-Started-with-ReactJS.jpg?x94435">
+						</div>
+					</div>
+				</div>
+			</a>
+			
+			<hr>
+
+			<a href="">
+				<div class="row project-item">
+					<div class="col-md-7 project-text">
+						<h3>GameMaker Engine</h3>
+						<p>Yoyo Games' game engine is great for beginners and experienced and seasoned developers alike. Have a look at some of the games I've put together on my own, as well as some still in progress. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					</div>
+					<div class="col-md-5">
+						<div class="thumbnail">
+							<img src="https://www.yoyogames.com/system/blogs/featured_images/000/000/401/original/Newspost_1x.png?1480418002">
+						</div>
+					</div>
+				</div>
+			</a>
+			
+			<hr>
+
+			<a href="">
+				<div class="row project-item">
+					<div class="col-md-7 project-text">
+						<h3>Android</h3>
+						<p>Google's mobile platform Android hit an 88% market share of all smartphones, making it a great way to easily reach a large population with your apps. Check out some of the small apps I've made here. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					</div>
+					<div class="col-md-5">
+						<div class="thumbnail">
+							<img src="https://1yjmqg26uh9k15zq0o1pderc-wpengine.netdna-ssl.com/wp-content/uploads/2017/01/android-image.png">
+						</div>
+					</div>
+				</div>
+			</a>
+		</div>
+		<!-- END PROJECTS SECTION -->
+
+		<div id="about-me" class="section">
+			<h1 id="about-me-anchor">About Me</h1>
+			<div class="row">
+				<div class="col-md-6 about-me-section">
+					<h3>Skills</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat.</p>
+				</div>
+				<div class="col-md-6 about-me-section">
+					<h3>Stuff</h3>
+					<p>Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				</div>
+				<div class="col-md-6 about-me-section">
+					<h3>Other Stuff</h3>
+					<p>Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				</div>
+				<div class="col-md-6 about-me-section">
+					<h3>Things</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat.</p>
+				</div>
+				<div class="col-md-6 about-me-section">
+					<h3>Skills</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat.</p>
+				</div>
+				<div class="col-md-6 about-me-section">
+					<h3>Stuff</h3>
+					<p>Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				</div>
+			</div>
+		</div>
+		<!-- END ABOUT ME SECTION -->
+
+		<div id="contacts" class="section">
+			<h1 id="contacts-anchor">Contacts</h1>
+			<div class="row-fluid">
+				<div class="col-lg-12">
+					<p><i class="fa fa-envelope" aria-hidden="true"></i> jeffrey.ovalles@gmail.com</p>
+				</div>
+			</div>
+		</div>
+		<!-- END CONTACTS SECTION -->
+	</div>
+</div>
+
+
+<!-- PRELOAD IMAGES? OR SOMETHING IDK IF THIS WORKS YET -->
+<div id="preload">
+	<img src="images/header-background.jpeg" width="1" height="1">
+	<img src="images/darkness_screenshot.png">
+	<img src="images/work-in-progress.jpg">
+	<img src="http://codecondo.com/wp-content/uploads/2015/05/Resources-to-Get-You-Started-with-ReactJS.jpg?x94435" width="1" height="1">
+	<img src="https://www.yoyogames.com/system/blogs/featured_images/000/000/401/original/Newspost_1x.png?1480418002" width="1" height="1">
+	<img src="https://1yjmqg26uh9k15zq0o1pderc-wpengine.netdna-ssl.com/wp-content/uploads/2017/01/android-image.png" width="1" height="1">
+</div>
 
 <script
   src="https://code.jquery.com/jquery-3.2.1.min.js"
@@ -44,5 +278,6 @@
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
 	integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
 	crossorigin="anonymous"></script>
+	<script type="text/javascript" src="script.js"></script>
 </body>
 </html>

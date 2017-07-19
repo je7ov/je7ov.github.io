@@ -8,6 +8,23 @@ let topFixed = false;
 let topNavPixels = topNav.offsetTop;
 let scrollAnimationFrame = null;
 
+// Flip every other project item listed
+for (const [index, project] of projects.entries()) {
+	const divs = project.children;
+	let colCount = 0;
+	if (index%2 == 1) {
+		for (let i=0; i < divs.length; i++) {
+			const divClass = divs[i].classList[0];
+			const colType = divClass.substring(0, 7);
+			const colNum = divClass.substring(7, divClass.length);
+			const pushing = i === 0;
+			const newClass = `${colType}${pushing ? "push-" : "pull-"}${12 - colNum}`;
+
+			divs[i].classList.add(newClass);
+		}
+	}
+}
+
 // Turn timing function into ease in and out
 function makeEaseInOut(timing, timeFraction) {
 	return function(timeFraction) {
@@ -43,6 +60,7 @@ function animate({duration, draw, timing}) {
 	});
 }
 
+// Scrolls to HTML element with specified ID
 function scrollToID(id) {
 	let wasFixed = topFixed;
 	const topPixels = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
@@ -59,7 +77,7 @@ function scrollToID(id) {
 	}
 
 	let pixelsToScroll = anchor.offsetTop - topPixels - anchorHeight;
-	const animDuration = Math.abs(pixelsToScroll) / 5;
+	const animDuration = Math.abs(pixelsToScroll) / 4.5;
 
 	scrollAnimationFrame = animate({
 		duration: animDuration,
@@ -98,20 +116,3 @@ function scrollListener() {
 	checkTopNav();
 }
 window.addEventListener("scroll", scrollListener);
-
-// Flip every other project item listed
-for (const [index, project] of projects.entries()) {
-	const divs = project.children;
-	let colCount = 0;
-	if (index%2 == 1) {
-		for (let i=0; i < divs.length; i++) {
-			const divClass = divs[i].classList[0];
-			const colType = divClass.substring(0, 7);
-			const colNum = divClass.substring(7, divClass.length);
-			const pushing = i === 0;
-			const newClass = `${colType}${pushing ? "push-" : "pull-"}${12 - colNum}`;
-
-			divs[i].classList.add(newClass);
-		}
-	}
-}
