@@ -31,14 +31,14 @@ function checkTopNav() {
 
 	const topPixels = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
 	if (topFixed) {
-		if (topPixels - 2 < topNavPixels) {
+		if (topPixels + 1 < topNavPixels) {
 			topNav.classList.toggle("fixed-top");
 			projectsDiv.classList.toggle("top-nav-padding");
 			topFixed = false;
 		}
 	} else {
 		let topNavPixels = topNav.offsetTop;
-		if (topPixels - 2 >= topNavPixels) {
+		if (topPixels + 1 >= topNavPixels) {
 			topNav.classList.toggle("fixed-top");
 			projectsDiv.classList.toggle("top-nav-padding");
 			topFixed = true;
