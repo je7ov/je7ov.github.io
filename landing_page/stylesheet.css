@@ -150,6 +150,10 @@ h1 {
 	.fixed-top {
 		width: 394px;
 	}
+
+	.top-nav .btn {
+		font-size: 11px;
+	}
 }
 
 @media (min-width: 768px) {
