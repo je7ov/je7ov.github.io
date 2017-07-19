@@ -60,6 +60,15 @@ h1 {
 	z-index: 10;
 }
 
+.section {
+	text-align: center;
+}
+
+.section ~ .section {
+	margin-top: 22px;
+	margin-bottom: 22px;
+}
+
 .top-nav {
 	display: flex;
 	justify-content: center;
@@ -73,7 +82,11 @@ h1 {
 }
 
 .top-nav-padding {
-	padding-top: 60px;
+	height: 80px;
+}
+
+.hidden {
+	display: none;
 }
 
 .fixed-top {
@@ -100,24 +113,23 @@ h1 {
 	padding-right: 26px;
 }
 
-#projects {
-	margin-top: 48px;
+.section h1:first-of-type {
+	padding-top: 42px;
+	padding-bottom: 42px;
+	margin: 0;
 }
 
-#projects .project-item:first-of-type {
-	margin-top: 48px;
+#about-me .about-me-section {
+	margin-bottom: 48px;
 }
 
-#projects .project-item:nth-of-type(even) {
-	transform: rotate(-180deg), ;
-	direction: ltr;
+#about-me .about-me-section p {
+	padding-left: 128px;
+	padding-right: 128px;
+	font-size: 20px;
 }
 
-#projects h1 {
-	text-align: center;
-}
-
-.row{
+.row {
   display: flex;
   flex-wrap: wrap;
 }
@@ -129,7 +141,7 @@ h1 {
 }
 
 #welcome-title {
-	min-width: 475;
+	min-width: 475px;
 }
 
 @media (max-width: 768px) {
@@ -170,6 +182,12 @@ h1 {
 	.fixed-top {
 	    width: 940px;
 	}
+
+	#about-me .about-me-section p {
+		padding-left: 98px;
+		padding-right: 98px;
+		
+	}
 }
 
 @media (min-width: 1200px) {
@@ -180,4 +198,8 @@ h1 {
 
 .btn {
 	border-radius: 18px;
+}
+
+#contacts p {
+	font-size: 24px;
 }
