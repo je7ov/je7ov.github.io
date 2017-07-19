@@ -160,10 +160,6 @@ a, a:link, a:visited, a:hover {
     justify-content: center;
 }
 
-#welcome-title {
-	min-width: 475px;
-}
-
 @media (max-width: 768px) {
 	#header h1 {
 		font-size: 2.5rem;
