@@ -148,7 +148,10 @@ h1 {
 	}
 
 	.fixed-top {
-		width: 394px;
+		width: 100%;
+		left: 0;
+		padding-left: 15px;
+		padding-right: 15px;
 	}
 
 	.top-nav .btn {

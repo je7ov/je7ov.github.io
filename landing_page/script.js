@@ -27,8 +27,6 @@ function animate({duration, draw, timing}) {
 
 // Handle functionality of top navigation buttons fixing to top
 function checkTopNav() {
-	console.log(window.getComputedStyle(topNav.children[0], null).height);
-
 	const topPixels = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
 	if (topFixed) {
 		if (topPixels + 1 < topNavPixels) {
