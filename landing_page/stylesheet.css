@@ -76,24 +76,6 @@ h1 {
 	padding-top: 60px;
 }
 
-@media (min-width: 768px) {
-	.fixed-top {
- 	   width: 720px;
-  }
-}
-
-@media (min-width: 992px) {
-	.fixed-top {
-	    width: 940px;
-	}
-}
-
-@media (min-width: 1200px) {
-	.fixed-top {
-	    width: 1140px;
-	}
-}
-
 .fixed-top {
 	position: fixed;
 	top: 0;
@@ -101,7 +83,8 @@ h1 {
 	height: 70px;
 	z-index: 100;
 	padding-bottom: 14px;
-	
+	margin-left: auto;
+	margin-right: auto;
 	box-shadow: 0 5px 4px white,
 							0 10px 20px white,
 							0 14px 50px white;
@@ -162,6 +145,24 @@ h1 {
 	#header h1:nth-of-type(3) {
 		letter-spacing: 3.6px;
 		margin-left: 8px;
+	}
+}
+
+@media (min-width: 768px) {
+	.fixed-top {
+ 	   width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+	.fixed-top {
+	    width: 940px;
+	}
+}
+
+@media (min-width: 1200px) {
+	.fixed-top {
+	    width: 1140px;
 	}
 }
 
