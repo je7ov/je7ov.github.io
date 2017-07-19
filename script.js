@@ -76,7 +76,7 @@ function scrollToID(id) {
 		return;
 	}
 
-	let pixelsToScroll = anchor.offsetTop - topPixels - anchorHeight;
+	let pixelsToScroll = anchor.offsetTop - topPixels - anchorHeight + 60;
 	const animDuration = Math.abs(pixelsToScroll) / 4.5;
 
 	scrollAnimationFrame = animate({
