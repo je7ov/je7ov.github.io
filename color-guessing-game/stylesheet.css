@@ -32,10 +32,8 @@ h1, h2 {
 
 #button-container h5 {
 	width: 56%;
-}
-
-#button-container h5 {
 	padding-top: 4px;
+	height: 26px;
 }
 
 #button-container h4:first-of-type {
@@ -234,5 +232,16 @@ a:hover {
 @media (max-width: 767px) {
 	#container {
 		max-width: 100%;
+		width: 100%;
+	}
+
+	#button-container h4, #button-container h5 {
+		font-size: 14px;
+		padding-top: 6px;
+		height: 24px;
+	}
+
+	#button-container #reset:hover {
+		background-color: #f8f8f8
 	}
 }
