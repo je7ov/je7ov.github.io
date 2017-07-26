@@ -204,28 +204,22 @@ a, a:link, a:visited, a:hover {
 		font-size: 11px;
 		padding-top: 8px;
 	}
-
-	#about-me .about-me-section p {
-		padding-left: 8px;
-		padding-right: 8px;
-		font-size: 16px;
-	}
 }
 
 @media (min-width: 768px) {
 	.fixed-top {
  	   width: 720px;
   }
-
-  #about-me .about-me-section p {
-		padding-left: 80px;
-		padding-right: 80px;
-	}
 }
 
 @media (min-width: 992px) {
 	.fixed-top {
 	    width: 940px;
+	}
+
+	#about-me .about-me-section p {
+		padding-left: 80px;
+		padding-right: 80px;
 	}
 
 }
