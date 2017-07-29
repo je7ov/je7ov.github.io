@@ -42,7 +42,11 @@ function startup() {
 
 	setActiveDifficulty();
 
-	resetButton.addEventListener('click', reset);
+	resetButton.addEventListener('click', () => {
+		score = 0;
+		scoreDisplay.innerHTML = '0';
+		reset();
+	});
 }
 
 function initialize() {
