@@ -14,6 +14,11 @@ h1, h2 {
 
 #title {
 	padding: 50px 0;
+	background-color: #232323;
+}
+
+#container > h2 {
+	margin-bottom: 24px;
 }
 
 #button-container h4, #button-container h5 {
@@ -28,20 +33,17 @@ h1, h2 {
 
 #button-container h4 {
 	width: 12%;
+	float: left;
 }
 
 #button-container h5 {
-	width: 56%;
+	width: 42%;
 	padding-top: 4px;
 	height: 26px;
-}
-
-#button-container h4:first-of-type {
 	float: left;
 }
 
 #button-container h4, h5 {
-	float: right;
 	-moz-transition: background-color 0.5s, color 0.5s;
 	-webkit-transition: background-color 0.5s, color 0.5s;
 	transition: background-color 0.5s, color 0.5s;
@@ -61,6 +63,14 @@ h1, h2 {
 	background-color: #333;
 }
 
+#difficulty-container {
+	height: 100%;
+}
+
+#difficulty-container h4 {
+	float: right;
+}
+
 #button-background-container {
 	background-color: #f8f8f8;
 	height: 30px;
@@ -76,8 +86,9 @@ h1, h2 {
 }
 
 .row {
-	width: 100%;
-	padding-bottom: 34%;
+	width: 66.6%;
+	margin-left: 16.65%;
+	padding-bottom: 22.5%;
 }
 
 .red {
@@ -152,6 +163,7 @@ h1, h2 {
 	animation-duration: 0.5s;
 	animation-fill-mode: forwards;
 	animation-timing-function: ease-in-out;
+	cursor: default;
 }
 
 .row.disappear {
