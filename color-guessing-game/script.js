@@ -81,13 +81,6 @@ function initialize() {
 	fadeColor(title, 'background-color', titleColor, {r: 35, g: 35, b: 35}, 650);
 }
 
-function getBackgroundColor(element) {
-	let bgColor = window.getComputedStyle(element).backgroundColor;
-	bgColor = bgColor.substring(4, bgColor.length - 1).replace(/ /g, '').split(',');
-	bgColor = {r: bgColor[0], g: bgColor[1], b: bgColor[2]}
-	return bgColor;
-}
-
 // Set up the board
 function setupBoard() {
 	if (boardRows !== difficulty) {
@@ -168,20 +161,7 @@ function setActiveDifficulty() {
 	scoreDisplay.innerHTML = '0';
 }
 
-// Get random rgb color
-function randomColor() {
-	const r = Math.round(255 * Math.random());
-	const g = Math.round(255 * Math.random());
-	const b = Math.round(255 * Math.random());
-	return {r, g, b};
-}
 
-// Get array of random colors
-function getRandomColors(num) {
-	colArr = [];
-	for (let i=0; i < num; i++) colArr[i] = randomColor();
-	return colArr;
-}
 
 // End game
 function endGame() {
@@ -232,6 +212,34 @@ function reset() {
 	}
 	resultDisplay.innerHTML = '';
 }
+
+// ------- HELPER FUNCTIONS ------- //
+
+function getBackgroundColor(element) {
+	let bgColor = window.getComputedStyle(element).backgroundColor;
+	bgColor = bgColor.substring(4, bgColor.length - 1).replace(/ /g, '').split(',');
+	bgColor = {r: bgColor[0], g: bgColor[1], b: bgColor[2]}
+	return bgColor;
+}
+
+
+// Get random rgb color
+function randomColor() {
+	const r = Math.round(255 * Math.random());
+	const g = Math.round(255 * Math.random());
+	const b = Math.round(255 * Math.random());
+	return {r, g, b};
+}
+
+
+// Get array of random colors
+function getRandomColors(num) {
+	colArr = [];
+	for (let i=0; i < num; i++) colArr[i] = randomColor();
+	return colArr;
+}
+
+// ------- END HELPER FUNCTIONS ------- //
 
 // ------- END GAME LOGIC SECTION ------- //
 
