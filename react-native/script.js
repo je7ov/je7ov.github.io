@@ -1,9 +1,5 @@
 const sections = document.querySelectorAll(".section");
 
-function sectionListener() {
-
-}
-
 function toggleSectionContent(clickedIndex) {
   for (const [index, section] of sections.entries()) {
     const content = section.querySelector(".section-content");
