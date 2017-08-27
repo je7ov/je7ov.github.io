@@ -64,7 +64,6 @@ html, body {
 
 .section p {
   font-size: 1.7em;
-  margin-bottom: 12px;
 }
 
 .section-item {
@@ -86,11 +85,43 @@ html, body {
   overflow: hidden;
   max-height: 0;
   margin-top: 36px;
-  transition: max-height 0.75s ease-in-out;
+  transition: all 0.75s ease-in-out;
+  background-color: #C6DAE6;
+  border-radius: 12px;
 }
 
 .show {
-  max-height: 550px;
-  transition: max-height 0.75s ease-in-out;
+  max-height: 1000px;
+  padding: 24px 0 ;
+  transition: all 0.75s ease-in-out;
 }
 
+.thumbnail {
+  margin-right: 20%;
+}
+
+.description {
+  margin: 0 48px;
+}
+
+@media (min-width: 768px) {
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .row > [class*="col-"] {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 500px;
+  } 
+}
+
+/* [class*="col-"]:nth-of-type(odd) {
+  background-color: orange;
+}
+
+[class*="col-"]:nth-of-type(even) {
+  background-color: pink;
+} */
