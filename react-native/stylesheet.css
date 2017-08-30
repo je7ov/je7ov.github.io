@@ -4,6 +4,11 @@ html, body {
   margin: 0;
 }
 
+.large {
+  font-size: 28px;
+  font-weight: 700;
+}
+
 #header {
   height: 340px;
   width: 100%;
