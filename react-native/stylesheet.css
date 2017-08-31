@@ -58,6 +58,10 @@ html, body {
   background-color: #0A3D5C;
 }
 
+.top-nav .btn:active {
+  background-color: #0E5581;
+}
+
 .top-nav-padding {
   height: 80px;
 }
